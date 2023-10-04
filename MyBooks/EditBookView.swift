@@ -149,5 +149,6 @@ struct EditBookView: View {
     let preview = Preview(Book.self)
    return  NavigationStack {
        EditBookView(book: Book.sampleBooks[4])
+           .modelContainer(preview.container)
     }
 }
