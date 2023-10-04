@@ -74,6 +74,8 @@ struct BookListView: View {
 }
 
 #Preview {
-    BookListView()
-        .modelContainer(for: Book.self, inMemory: true)
+    let preview = Preview(Book.self)
+    preview.addExamples(Book.sampleBooks)
+    return BookListView()
+        .modelContainer(preview.container)
 }
