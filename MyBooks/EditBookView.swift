@@ -43,14 +43,14 @@ struct EditBookView: View {
                 }
                 if status == .inProgress || status == .completed {
                     LabeledContent {
-                        DatePicker("", selection: $dateStarted, displayedComponents: .date)
+                        DatePicker("", selection: $dateStarted, in: dateAdded..., displayedComponents: .date)
                     } label: {
                         Text("Date Started")
                     }
                 }
                 if status == .completed {
                     LabeledContent {
-                        DatePicker("", selection: $dateCompleted, displayedComponents: .date)
+                        DatePicker("", selection: $dateCompleted, in: dateStarted..., displayedComponents: .date)
                     } label: {
                         Text("Date Completed")
                     }
