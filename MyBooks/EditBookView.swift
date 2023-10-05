@@ -58,26 +58,26 @@ struct EditBookView: View {
             }
             .foregroundStyle(.secondary)
             .onChange(of: status) { oldValue, newValue in
-                if firstView {
-                    if newValue == .onShelf {
-                        dateStarted = Date.distantPast
-                        dateCompleted = Date.distantPast
-                    } else if newValue == .inProgress && oldValue == .completed {
-                        // from completed to inProgress
-                        dateCompleted = Date.distantPast
-                    } else if newValue == .inProgress && oldValue == .onShelf {
-                        // Book has been started
-                        dateStarted = Date.now
-                    } else if newValue == .completed && oldValue == .onShelf {
-                        // Forgot to start book
-                        dateCompleted = Date.now
-                        dateStarted = dateAdded
-                    } else {
-                        // completed
-                        dateCompleted = Date.now
+                    if !firstView {
+                        if newValue == .onShelf {
+                            dateStarted = Date.distantPast
+                            dateCompleted = Date.distantPast
+                        } else if newValue == .inProgress && oldValue == .completed {
+                            // from completed to inProgress
+                            dateCompleted = Date.distantPast
+                        } else if newValue == .inProgress && oldValue == .onShelf {
+                            // Book has been started
+                            dateStarted = Date.now
+                        } else if newValue == .completed && oldValue == .onShelf {
+                            // Forgot to start book
+                            dateCompleted = Date.now
+                            dateStarted = dateAdded
+                        } else {
+                            // completed
+                            dateCompleted = Date.now
+                        }
+                        firstView = false
                     }
-                    firstView = false
-                }
             }
             Divider()
             LabeledContent {
