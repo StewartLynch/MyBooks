@@ -58,7 +58,7 @@ struct EditBookView: View {
             }
             .foregroundStyle(.secondary)
             .onChange(of: status) { oldValue, newValue in
-                if firstView {
+                if !firstView {
                     if newValue == .onShelf {
                         dateStarted = Date.distantPast
                         dateCompleted = Date.distantPast
