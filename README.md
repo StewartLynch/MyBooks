@@ -1,4 +1,4 @@
-# MyBooks - SwiftData One To Many Relationships
+# MyBooks - SwiftData Many To Many Relationships
 
 Here is the completed code for the Video of the same name.
 
@@ -10,4 +10,4 @@ If you want to support my work, you can - </br>
 
 
 
-Coming November 26
+Coming Dec 3
