@@ -15,8 +15,8 @@ import SwiftData
 @Model
 class Quote {
     var creationDate: Date = Date.now
-    var text: String
-    var page: String?
+    var text: String = ""
+    var page: String? = ""
     
     init(text: String, page: String? = nil) {
         self.text = text

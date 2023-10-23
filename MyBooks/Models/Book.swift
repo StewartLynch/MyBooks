@@ -14,15 +14,15 @@ import SwiftData
 
 @Model
 class Book {
-    var title: String
-    var author: String
-    var dateAdded: Date
-    var dateStarted: Date
-    var dateCompleted: Date
+    var title: String = ""
+    var author: String = ""
+    var dateAdded: Date = Date.now
+    var dateStarted: Date = Date.distantPast
+    var dateCompleted: Date = Date.distantPast
     @Attribute(originalName: "summary")
-    var synopsis: String
+    var synopsis: String = ""
     var rating: Int?
-    var status: Status.RawValue
+    var status: Status.RawValue = Status.onShelf.rawValue
     var recommendedBy: String = ""
     @Relationship(deleteRule: .cascade)
     var quotes: [Quote]?
