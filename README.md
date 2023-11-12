@@ -1,4 +1,4 @@
-# MyBooks - SwiftData Containers and Preview Data
+# MyBooks - SwiftData Dynamic Filtering and Sorting
 
 Here is the completed code for the Video of the same name.
 
