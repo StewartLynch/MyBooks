@@ -1,4 +1,4 @@
-# MyBooks - CloudKit
+# MyBooks - Storing Images and Bug Fixes
 
 Here is the completed code for the Video of the same name.
 
@@ -10,4 +10,4 @@ If you want to support my work, you can - </br>
 
 
 
-Coming Dec 17
+Coming Dec 24
